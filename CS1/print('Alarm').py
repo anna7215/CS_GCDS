@@ -1,4 +1,7 @@
+import time
+
 print('Alarm!')
+
 while True:
     while True:
         snooze = input('Snooze? Yes or no?')
@@ -8,10 +11,14 @@ while True:
             break
         else: 
             print('Go back to sleep for 5 minutes.') 
+            time.sleep(2)
+
     hunger = input ('Are you hungry?')
 
     if hunger == 'yes':
-        print('Eat breakfast and then go to the bathroom.')
+        print('Eat breakfast')
+        time.sleep(2)
+        print('Go to the bathroom')
     else:
         print('Go to the bathroom.')
     
@@ -22,7 +29,21 @@ while True:
             print('Go to your room to get dresssed.')
             break
         else:
-            print('Fix it!')
+            print('Fix it!')    
+            time.sleep(2)
+
+    while True:
+        shirt = input('Do you want to wear your red shirt?')
+       
+        if shirt == 'yes':
+            print('Put on red shirt')
+            break
+        else:
+            print('Check what other shirts you have.')
+            time.sleep(2)
+    print('Grab your backpack and get into your car')
+
+
         
 
     
