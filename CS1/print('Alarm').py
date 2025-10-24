@@ -43,6 +43,27 @@ while True:
             time.sleep(2)
     print('Grab your backpack and get into your car')
 
+    while True:
+        temp = input ('Are you too cold in your car?')
+
+        if temp =='no':
+            print ('Turn the AC on.')
+            break
+        else:
+            print('Turn the heat up!')
+            time.sleep(2)
+    print('Start driving!')
+
+    music = input('Do you listen to music during the ride?')
+
+    if music =='yes':
+        print('Get airpods out of bag and put them in.')
+    else:
+        print('Look out the window and enjoy the ride!')
+        time.sleep(2)
+    print('You have arrived at school, have a good day!')
+
+
 
         
 
