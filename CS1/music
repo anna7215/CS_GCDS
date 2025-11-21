@@ -1,0 +1,5 @@
+M = ["x", "y", "z"]
+M.append("a")
+print(M[1])
+M.pop(0)
+print(M)

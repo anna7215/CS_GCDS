@@ -1,0 +1,68 @@
+import random                                        #import
+import time                                          #import
+choices = ["rock", "paper", "scissors"]              #choice list 
+
+computer_score = 0                                   #set computer score to 0
+user_score = 0                                       #set user score to 0
+
+
+while user_score < 5:                                #forever loop until user scores 5
+    if user_score > 5:                               #when user score is 5
+        print("You win RPS!")                        #diplay message
+        break                                        #break forever loop
+    if computer_score >= 5:                          #when computer score is 5
+        print("You lose RPS!")                       #display message
+        break                                        #break forever loop
+    user_input = input("rock, paper, or scissors?")  #proompt user
+    computer_choice = random.choice(choices)         #promt computer
+    if user_input == "rock":                         #users input
+        if computer_choice == "scissors":            #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You win!")                        #diplay message
+            time.sleep(2)                            #pause program for 2 seconds
+            user_score += 1                          #+1 to users score
+        if computer_choice == "paper":               #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You lose!")                       #diplay message
+            time.sleep(2)                            #pause program for 2 seconds
+            computer_score += 1                      #+1 to computers score
+        if computer_choice == "rock":                #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You tied!")                       #diplay message
+            time.sleep(2)                            #pause program for 2 seconds  
+        print(f"Your score is:", (user_score))       #display users score
+        print(f"Computer score:", (computer_score))  #display computers score
+    if user_input == "scissors":                     #users input
+        if computer_choice == "rock":                #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You lose!")                       #diplay message
+            time.sleep(2)                            #pause program for 2 seconds
+            computer_score += 1                      #+1 to computers score
+        if computer_choice == "paper":               #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You win!")                        #display message
+            time.sleep(2)                            #pause program for 2 seconds
+            user_score += 1                          #+1 to users score
+        if computer_choice == "scissors":            #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You tied!")                       #diplay message
+            time.sleep(2)                            #pause program for 2 seconds    
+        print(f"Your score is:", (user_score))       #display users score
+        print(f"Computer score:", (computer_score))  #display computers code
+    if user_input == "paper":                        #users input
+        if computer_choice == "rock":                #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You win!")                        #diplay message
+            time.sleep(2)                            #pause program for 2 seconds
+            user_score += 1                          #+1 to users score
+        if computer_choice == "scissors":            #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You lose!")                       #diplay message
+            time.sleep(2)                            #pause program for 2 seconds
+            computer_score += 1                      #+1 to computers score
+        if computer_choice == "paper":               #computer input
+            print(F"Computer: {computer_choice}")    #display computer choice
+            print("You tied!")                       #diplay message
+            time.sleep(2)                            #pause program for 2 seconds
+        print(f"Your score:", (user_score))          #display users score
+        print(f"Computers score:", (computer_score)) #display computers code

@@ -1,0 +1,37 @@
+import random  #import random from list 
+
+
+while True:    #forever loop
+    response = ['Yes', 'No', 'Maybe', 'Ask again later', 'Inconclusive', 'outlook good', 'Most likley', 'My sources say no'] #possible responses
+    question = input('What can I answer for you today?')    #prompt user for question, convert to lowercase, and store in variable
+
+    print(random.choice(response))     #display message
+
+
+    def print_colored_text(text, color_name):
+        """
+        Print the given text in a specified color.
+       
+        Args:
+            text (str): The text to be printed.
+            color_name (str): The color of the text to be printed.
+        """
+           
+        colors = {                  # Dictionary mapping color names to their ANSI escape codes for terminal text coloring
+            'black': '\033[30m',    # Black text color
+            'red': '\033[31m',      # Red text color
+            'green': '\033[32m',    # Green text color
+            'yellow': '\033[33m',   # Yellow text color
+            'blue': '\033[34m',     # Blue text color
+            'magenta': '\033[35m',  # Magenta (purple) text color
+            'cyan': '\033[36m',     # Cyan text color
+            'white': '\033[37m',    # White text color
+            'reset': '\033[0m',     # Reset text color to default
+        }
+       
+        color_code = colors.get(color_name.lower(), '\033[37m') # Get the ANSI color code for the given color name, defaulting to white if the color is not found
+        print(f"{color_code}{text}\033[0m")                     # Print the text with the specified color, followed by the reset code to ensure no color leaks
+
+
+    print_colored_text('The magic 8 ball has spoken.', 'red')   #display message 
+    continue                                                    #repeat loop
